@@ -1,7 +1,7 @@
 {
   "name": "jest-resolve-no-esm",
   "description": "A jest-resolve fork that optionally disables the self-described \"bad version\" of Jest's attempt at replicating Node's type resolution algorithm",
-  "version": "30.9999.1",
+  "version": "30.9999.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/jestjs/jest.git",

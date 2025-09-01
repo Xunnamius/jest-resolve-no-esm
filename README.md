@@ -35,8 +35,13 @@ the now-transpiled-CJS-module as if it were ESM just because its file names end
 in `.js` and the nearest `package.json` file contains `"type": "module"`.
 
 This fork allows me to disable ESM loading when
-`process.env.JEST_RESOLVE_NO_ESM` is truthy and avoid false positive "errors"
-like `Must use import to load ES Module: ...`.
+`process.env.JEST_RESOLVE_NO_ESM` is truthy, which avoids false positive
+"errors" like `Must use import to load ES Module: ...`.
+
+> [!NOTE]
+>
+> For now, `.mjs` and `.mts` files will _always_ be loaded as ESM even when
+> using this module. This may be revisited later.
 
 ## Installation and Usage
 
@@ -45,6 +50,14 @@ like `Must use import to load ES Module: ...`.
 ```shell
 npm install --save-dev jest-resolve@npm:jest-resolve-no-esm@30 jest
 ```
+
+> [!NOTE]
+>
+> You may need to use
+> [the `package.json` overrides feature](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides)
+> for a complete installation. See
+> [this package](https://github.com/Xunnamius/jest-resolve-no-esm/blob/main/package.json)
+> for an example.
 
 2. Activate:
 
@@ -56,5 +69,6 @@ Alternatively, you could set `process.env.JEST_RESOLVE_NO_ESM = 'true'` in a
 Jest [config file](https://jestjs.io/docs/configuration) or
 [setup file](https://jestjs.io/docs/configuration#setupfiles-array).
 
-For example, [unified-utils](https://github.com/Xunnamius/unified-utils) uses
-this package to test its ESM-only packages.
+For example,
+[unified-utils](https://github.com/Xunnamius/jest-resolve-no-esm/blob/main/package.json)
+uses this package to test its ESM-only packages.
