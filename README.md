@@ -43,7 +43,7 @@ like `Must use import to load ES Module: ...`.
 1. Install:
 
 ```shell
-npm install --save-dev jest-resolve@npm:jest-resolve-no-esm jest
+npm install --save-dev jest-resolve@npm:jest-resolve-no-esm@30 jest
 ```
 
 2. Activate:
