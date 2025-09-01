@@ -53,4 +53,7 @@ JEST_RESOLVE_NO_ESM=true npx jest
 ```
 
 Alternatively, you could set `process.env.JEST_RESOLVE_NO_ESM = 'true'` in a
-[Jest setup file](https://jestjs.io/docs/configuration#setupfiles-array).
+[Jest config file](https://jestjs.io/docs/configuration).
+
+For example, [unified-utils](https://github.com/Xunnamius/unified-utils) uses
+this package to test its ESM-only packages.
