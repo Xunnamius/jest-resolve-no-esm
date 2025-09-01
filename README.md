@@ -41,7 +41,10 @@ This fork allows me to disable ESM loading when
 > [!NOTE]
 >
 > For now, `.mjs` and `.mts` files will _always_ be loaded as ESM even when
-> using this module. This may be revisited later.
+> using this module. This may be revisited later or, ideally, one day this
+> entire package and other annoying workarounds will be obsoleted because Jest
+> will support
+> [modern Node's ability to `require` ES modules natively](https://joyeecheung.github.io/blog/2024/03/18/require-esm-in-node-js/).
 
 ## Installation and Usage
 
@@ -56,7 +59,7 @@ npm install --save-dev jest-resolve@npm:jest-resolve-no-esm@30 jest
 > You may need to use
 > [the `package.json` overrides feature](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides)
 > for a complete installation. See
-> [this package](https://github.com/Xunnamius/jest-resolve-no-esm/blob/main/package.json)
+> [this package](https://github.com/Xunnamius/unified-utils/blob/21a4298ce567e54f4b3f55d028f23348e04481b7/package.json#L41-L48)
 > for an example.
 
 2. Activate:
@@ -70,5 +73,5 @@ Jest [config file](https://jestjs.io/docs/configuration) or
 [setup file](https://jestjs.io/docs/configuration#setupfiles-array).
 
 For example,
-[unified-utils](https://github.com/Xunnamius/jest-resolve-no-esm/blob/main/package.json)
+[unified-utils](https://github.com/Xunnamius/unified-utils/blob/21a4298ce567e54f4b3f55d028f23348e04481b7/package.json#L41-L48)
 uses this package to test its ESM-only packages.
